@@ -4,6 +4,9 @@ To run the project, simply
 ```
 $ npm install
 ```
+```
+$ npm start
+```
 ## Implementation
 The system is a single page application, made using React JS. <br>
 The focus leans toward the back-end implementation rather than the front-end since I believe I do not have enough knowledge and creativity develop my own CSS to create a beautiful UI. However, I have attempted to 'beautify' the UI with App.css. <br>
