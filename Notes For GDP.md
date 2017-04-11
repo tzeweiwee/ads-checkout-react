@@ -38,7 +38,7 @@ I have attempted to separate the matter of concerns into many different componen
 **Savings**: This may be unnecessary but if I'm the client, I would find knowing how much I save when I apply the the deals or discounts extremely helpful. Savings shown in the summary table and when the priviledged clients apply deals or discounts to their desired products.
 
 ## Setting up pricing rules
-There is only 2 types of rules. One is a deal, the other is a discount.
+There are 2 types of rules. One is a deal, the other is a discount.
 In PricingRules.js,
 ```
 setDeal(client, product, minStock, offerStock)
