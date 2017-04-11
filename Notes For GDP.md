@@ -56,6 +56,6 @@ setDiscount(client, product, price, minStock)
 **minStock**: number: minimum quantity of the product to qualify for the deal
 
 ## Thank You
-I have given my best effort with my heart and soul into this project. I hope I have achieved at least the minimum requirements or expectations of the assessment test. And I chose React because this is an opportunity to learn more about React's architecture, virtual DOM and it's lifecycle. Btw, you can check the time I've spent on this project [See My Wakatime](https://wakatime.com/@tzeweiwee/projects/lquatgtuis?start=2017-03-30&end=2017-04-12). I look forward to hearing from GDP again. Thank you and have a good day.
+I have given my best effort with my heart and soul into this project. I hope I have achieved at least the minimum requirements or expectations of the assessment test. And I chose React because this is an opportunity to learn more about React's architecture, virtual DOM and it's lifecycle. Btw, you can check the time I've spent on this project [See My Wakatime](https://wakatime.com/@tzeweiwee/projects/lquatgtuis?start=2017-03-30&end=2017-04-12). I look forward to hearing from GDP again. Thank you and have a good day. :bowtie:
 
 
