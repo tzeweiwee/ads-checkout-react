@@ -18,5 +18,3 @@ ReactJS, HTML, CSS, JSX <br>
 ```
 $ npm start
 ```
-
-
