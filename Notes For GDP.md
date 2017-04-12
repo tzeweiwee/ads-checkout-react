@@ -58,7 +58,7 @@ setDiscount(client, product, price, minStock)
 **minStock**: number: minimum quantity of the product to qualify for the deal
 
 ## Unit Tests
-I have never done unit testing before. For this project, I've utilised Jest and Enzyme to unit test the total price from pricing rules. You can see the results below.
+As mentioned to Mr Jerome, I have never done unit testing before. For this project, I've utilised Jest and Enzyme to unit test the total price from pricing rules. You can see the results below.
 It took awhile for me to learn about unit tests so I could only unit tests the most important part of the system which is the total price.<br> 
 Just run this in the console to checkout the test results: 
 ```
