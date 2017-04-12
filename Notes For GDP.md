@@ -33,7 +33,7 @@ I have separated the matter of concerns into many different components. This all
 **Flexibility**: I have noticed in the document that there may be a trend in deals and discounts for each type of product. "classic ad" usually have 3 for 2 deals/ numA for numB type of deals while "standout ad" have discounted price per ad purchased and "premium ad" have discounted price if the client buys more than a certain quantity. <br> In my solution, I have allowed ANY type of product to have ANY kind of deal or discount. E.g "classic ad" costs $250.00 when 3 or more are purchased. Please read below for setting up pricing rules.
 
 ## Front-end features
-**UI**: As single page application, the UI are rendered in real-time. Clients can search or simply select their name from the list.
+**UI**: As single page application, the page never refreshes and the UI components will be updated instantly upon changes. Clients can search or simply select their name from the list.
 
 **Deals & Discounts Message**: The pricing rules are interpreted and converted into a message to remind priviledged clients of their special pricing.
 
