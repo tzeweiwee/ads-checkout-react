@@ -18,16 +18,7 @@ class PricingRules extends Component {
                 pricingRules: []
             }
         }
-        /*
-            setDeal method is used for setting *numA for numB* type of deals.
-            e.g. setDeal("nike", "classic", 3, 2); <= 3 for 2 deal on classic ads exclusively for nike.
-            setDeal(
-                client: string: name of the customer/company,
-                product: string: name of the product,
-                minStock: number: minimum quantity of the product to qualify for the deal,
-                offerStock: number: the quantity of product offered given that the minimum quantity is reached
-            )
-        */
+    //setDeal method is used for setting *numA for numB* type of deals.
     setDeal(client, product, minStock, offerStock) {
             let productList = this.props.productList;
             try {
@@ -64,21 +55,9 @@ class PricingRules extends Component {
                 console.log("ERROR: " + e.message);
             }
         }
-        /*
-            setDiscount method is used for setting *price per ad* type of deals.
-            e.g. setDiscount("nike", 1, "premium", 250.00); <= $250.00 per premium ad purchased exclusively for nike.
-            e.g. setDiscount("nike", 2, "standout", 220.00, 3); <= $220.00 per standout ad with minimum purchases of 3 standout ads
-            setDiscount(
-                client: string: name of the customer/company,
-                type: number: 1 OR 2 ONLY. 
-                              Type 1 discounts are discounts WITHOUT minimum quantity requirement
-                              Type 2 discounts are discounts WITH minimum quantity requirement,
-                product: string: name of the product (any),
-                price: number: price given to the discounted product
-                minStock: number: OPTIONAL: minimum quantity of the product to qualify for the deal,
-            )
-        */
-    setDiscount(client, type, product, price, minStock) {
+    
+    //setDiscount method is used for setting *price per ad* type of deals.
+    setDiscount(client, product, price, minStock) {
         let productList = this.props.productList;
         try {
             //validate product, whether the product exist or declared in Product.js
@@ -89,11 +68,11 @@ class PricingRules extends Component {
                     return;
                 }
             });
-            if (productMatch && ((type === 1))) {
+            if (productMatch) {
                 if (typeof(price) === "number") {
                     if (typeof(minStock) === "number" || typeof(minStock) === 'undefined') {
                         let deal = {
-                            type: type,
+                            type: 1,
                             product: product,
                             price: price,
                             minStock: minStock,
@@ -111,7 +90,7 @@ class PricingRules extends Component {
                     throw new Error("setDiscount > price value is incorrect.");
                 }
             } else {
-                throw new Error("setDiscount > type value is incorrect. OR product not found");
+                throw new Error("setDiscount > product not found");
             }
 
         } catch (e) {
@@ -127,13 +106,13 @@ class PricingRules extends Component {
                 //unilever
                 this.setDeal("unilever", "classic", 3, 2);
                 //apple
-                this.setDiscount("apple", 1, "standout", 299.99, 1);
+                this.setDiscount("apple", "standout", 299.99, 1);
                 //nike
-                this.setDiscount("nike", 1, "premium", 379.99, 4);
+                this.setDiscount("nike", "premium", 379.99, 4);
                 //ford
                 this.setDeal("ford", "classic", 5, 4);
-                this.setDiscount("ford", 1, "standout", 309.99, 1);
-                this.setDiscount("ford", 1, "premium", 389.99, 3);
+                this.setDiscount("ford", "standout", 309.99, 1);
+                this.setDiscount("ford", "premium", 389.99, 3);
 
                 this.props.pricingRules(this.state.pricingRules);
             }

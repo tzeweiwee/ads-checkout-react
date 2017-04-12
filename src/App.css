@@ -6,7 +6,7 @@ App.css
 by Tze Wei, 2017
 https://github.com/tzeweiwee
 */
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Roboto|Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 .App {
     font-family: 'Open Sans', sans-serif;
     min-height: 1000px;

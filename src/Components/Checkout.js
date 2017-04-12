@@ -17,7 +17,6 @@ class Checkout extends Component {
             fullPrice: "",
             discountedPrice: ""
         };
-
         let inclusiveStock = prod.quantity;
         let exclusiveStock = prod.quantity % rule.minStock;
         let discountedProductsAmt;
@@ -52,14 +51,19 @@ class Checkout extends Component {
         return info;
     }
 
-    render() {
+    getTotal() {
         let totalPrice = 0;
         let pricingRules = this.props.pricingRules;
         let productList = this.props.productList;
         let activeCustomer = this.props.activeCustomer;
 
+        let summary = {
+            totalPrice: totalPrice,
+            productDetails: []
+        }
+
         //each product has a table row 
-        let productRows = productList.map(prod => {
+        let productDetails = productList.map(prod => {
             if (prod.quantity > 0) {
                 let discountedProductInfo = {
                     savings: "",
@@ -67,7 +71,7 @@ class Checkout extends Component {
                     discountedPrice: ""
                 };
                 if (activeCustomer !== 'default') {
-                    //check each rule if the client matches and the rule matches the current product
+                    //Checks if the special client has discounts on this product
                     let hasDiscount = false;
                     pricingRules.forEach(rule => {
                         if ((activeCustomer === rule.customerName) && (rule.product === prod.name)) {
@@ -91,10 +95,10 @@ class Checkout extends Component {
                             }
                         }
                     });
-                    if(!hasDiscount){
+                    //client doesnt have discount, normal pricing applies
+                    if (!hasDiscount) {
                         totalPrice += (prod.price * prod.quantity);
                     }
-
                 } else {
                     totalPrice += (prod.price * prod.quantity);
                 }
@@ -103,6 +107,16 @@ class Checkout extends Component {
                 );
             }
         });
+
+        summary.productDetails = productDetails;
+        summary.totalPrice = totalPrice;
+
+        return summary;
+
+    }
+
+    render() {
+        let summary = this.getTotal();
         return (
             <div className="Checkout">
                 <h3>Summary</h3>
@@ -110,11 +124,11 @@ class Checkout extends Component {
                 <table id="checkout-table" width="100%">
                     <thead></thead>
                     <tbody>
-                        {productRows}
+                        {summary.productDetails}
                     </tbody>
                 </table>
                 <hr />
-                <p id="checkout-total">Total: ${totalPrice.toFixed(2)}</p>
+                <p id="checkout-total">Total: ${summary.totalPrice.toFixed(2)}</p>
             </div>
         );
     }
