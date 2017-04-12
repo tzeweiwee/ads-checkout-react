@@ -10,8 +10,9 @@ $ npm install
 $ npm start
 ```
 ## Implementation
+*tech used: React.js HTML CSS Jest Enzyme*
 The system is a single page application, made using React JS. <br>
-The focus leans toward the back-end implementation rather than the front-end since I believe I do not have enough knowledge and creativity develop my own CSS to create a beautiful UI. However, I have attempted to 'beautify' the UI with App.css. <br>
+The focus leans toward the back-end implementation rather than the front-end since I do not believe I have enough knowledge and creativity develop my own CSS to create a beautiful UI. However, I have attempted to 'beautify' the UI with App.css. <br>
 There are 10 React Components. 
 I have separated the matter of concerns into many different components. This allows the code to be more maintable and readable.<br>
 1. Checkout
@@ -66,7 +67,7 @@ $ npm test
 ```
 ![testresults](https://github.com/tzeweiwee/ads-checkout-react/blob/master/images/test_data.PNG "Test Results (src\__tests__\App.test.js)")
 
-## Thank You
+> Thank You
 I have given my best effort to this project. I hope I have achieved at least the minimum requirements or expectations of the assessment test. And I chose React because this is an opportunity for me to learn more about React's architecture, virtual DOM and it's lifecycle. Btw, you can check the time I've spent on this project [See My Wakatime](https://wakatime.com/@tzeweiwee/projects/lquatgtuis?start=2017-04-07&end=2017-04-13). I look forward to hearing from GDP again. Thank you and have a good day. :bowtie:
 
 
