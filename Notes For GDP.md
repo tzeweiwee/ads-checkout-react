@@ -1,4 +1,6 @@
 # Hi
+This is how it looks
+[Screenshot](images/main_screenshot.png)
 ## Let's get started
 To run the project, simply
 ```
@@ -11,7 +13,7 @@ $ npm start
 The system is a single page application, made using React JS. <br>
 The focus leans toward the back-end implementation rather than the front-end since I believe I do not have enough knowledge and creativity develop my own CSS to create a beautiful UI. However, I have attempted to 'beautify' the UI with App.css. <br>
 There are 10 React Components. 
-I have attempted to separate the matter of concerns into many different components. This allows the code to be more maintable and readable.<br>
+I have separated the matter of concerns into many different components. This allows the code to be more maintable and readable.<br>
 1. Checkout
 2. CheckoutProduct
 3. Customer
@@ -55,7 +57,16 @@ setDiscount(client, product, price, minStock)
 **price**: number: price given to the discounted product <br>
 **minStock**: number: minimum quantity of the product to qualify for the deal
 
+## Unit Tests
+I have never done unit testing before. For this project, I've utilised Jest and Enzyme to unit test the total price from pricing rules. You can see the results below.
+It took awhile for me to learn about unit tests so I could only unit tests the most important part of the system which is the total price.<br> 
+Just run this in the console to checkout the test results: 
+```
+npm test
+```
+[Test Results (src\__tests__\App.test.js)](images/test_data.png)
+
 ## Thank You
-I have given my best effort with my heart and soul into this project. I hope I have achieved at least the minimum requirements or expectations of the assessment test. And I chose React because this is an opportunity for meto learn more about React's architecture, virtual DOM and it's lifecycle. Btw, you can check the time I've spent on this project [See My Wakatime](https://wakatime.com/@tzeweiwee/projects/lquatgtuis?start=2017-03-30&end=2017-04-12). I look forward to hearing from GDP again. Thank you and have a good day. :bowtie:
+I have given my best effort to this project. I hope I have achieved at least the minimum requirements or expectations of the assessment test. And I chose React because this is an opportunity for meto learn more about React's architecture, virtual DOM and it's lifecycle. Btw, you can check the time I've spent on this project [See My Wakatime](https://wakatime.com/@tzeweiwee/projects/lquatgtuis?start=2017-03-30&end=2017-04-12). I look forward to hearing from GDP again. Thank you and have a good day. :bowtie:
 
 
