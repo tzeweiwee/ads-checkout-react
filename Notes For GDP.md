@@ -62,7 +62,7 @@ I have never done unit testing before. For this project, I've utilised Jest and 
 It took awhile for me to learn about unit tests so I could only unit tests the most important part of the system which is the total price.<br> 
 Just run this in the console to checkout the test results: 
 ```
-npm test
+$ npm test
 ```
 ![testresults](https://github.com/tzeweiwee/ads-checkout-react/blob/master/images/test_data.PNG "Test Results (src\__tests__\App.test.js)")
 

@@ -16,5 +16,7 @@ ReactJS, HTML, CSS, JSX <br>
 
 ## Installation
 ```
-$ npm start
+$ npm install
 ```
+```
+$ npm
