@@ -1,5 +1,10 @@
 {
   "name": "ads-checkout-app",
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,6 +12,10 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "enzyme": "^2.8.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.5.1",
     "react-scripts": "0.9.5"
   },
   "scripts": {

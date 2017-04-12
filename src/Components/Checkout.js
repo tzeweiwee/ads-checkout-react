@@ -111,6 +111,8 @@ class Checkout extends Component {
         summary.productDetails = productDetails;
         summary.totalPrice = totalPrice;
 
+        this.props.totalPrice(summary.totalPrice);
+
         return summary;
 
     }

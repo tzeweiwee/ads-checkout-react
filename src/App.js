@@ -60,6 +60,10 @@ class App extends Component {
         });
     }
 
+    getTotalPrice(val){
+        console.log(val);
+    }
+
     render() {
         return (
             <div className="App">
@@ -82,7 +86,7 @@ class App extends Component {
               </div>
             </div>
             <div id="checkout-summary">
-              <Checkout activeCustomer={this.state.activeCustomer} productList={this.state.productList} pricingRules={this.state.pricingRules}/>
+              <Checkout totalPrice={this.getTotalPrice.bind(this)} activeCustomer={this.state.activeCustomer} productList={this.state.productList} pricingRules={this.state.pricingRules}/>
             </div>
         </div>
       </div>
