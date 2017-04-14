@@ -10,7 +10,7 @@ $ npm install
 $ npm start
 ```
 ## Implementation
-*tech used: React.js HTML CSS Jest Enzyme*
+*tech used: React.js HTML CSS Jest Enzyme* <br>
 The system is a single page application, made using React JS. <br>
 The focus leans toward the back-end implementation rather than the front-end since I do not believe I have enough knowledge and creativity develop my own CSS to create a beautiful UI. However, I have attempted to 'beautify' the UI with App.css. <br>
 There are 10 React Components. 
