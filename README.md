@@ -19,4 +19,4 @@ ReactJS, HTML, CSS, JSX <br>
 $ npm install
 ```
 ```
-$ npm
+$ npm start
